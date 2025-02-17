@@ -12,6 +12,7 @@ public class Composant implements Serializable {
 
     private String nomComposant;
     private Float prix;
+    @Enumerated(EnumType.STRING)
     private TypeComposant typeComposant;
     @ManyToOne
     private Menu menu;
