@@ -1,4 +1,8 @@
 package com.example.firstproject.Repositories;
 
-public interface ChefCuisinierRepository {
+import com.example.firstproject.Entities.ChefCuisinier;
+import com.example.firstproject.Entities.Client;
+import org.springframework.data.repository.CrudRepository;
+
+public interface ChefCuisinierRepository extends CrudRepository<ChefCuisinier, Long> {
 }
