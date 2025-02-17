@@ -12,7 +12,7 @@ public class Composant implements Serializable {
 
     private String nomComposant;
     private Float prix;
-
+    private TypeComposant typeComposant;
     @ManyToOne
     private Menu menu;
 
