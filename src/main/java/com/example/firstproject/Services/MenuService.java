@@ -2,13 +2,16 @@ package com.example.firstproject.Services;
 
 import com.example.firstproject.Entities.Menu;
 import com.example.firstproject.Repositories.MenuRepository;
+import lombok.AllArgsConstructor;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
-
+@Service
+@AllArgsConstructor
 public class MenuService implements IMenuService{
     MenuRepository menuRepository;
     @Override
-    public List<Menu> retrieveAllMenu() {
+    public List<Menu> retrieveAllMenus() {
         return (List<Menu>) menuRepository.findAll();
     }
 
@@ -33,7 +36,7 @@ public class MenuService implements IMenuService{
     }
 
     @Override
-    public List<Menu> addMenu(List<Menu> menus) {
+    public List<Menu> addMenus(List<Menu> menus) {
         return null;
     }
 }

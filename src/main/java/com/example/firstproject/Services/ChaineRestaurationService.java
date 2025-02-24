@@ -2,14 +2,17 @@ package com.example.firstproject.Services;
 
 import com.example.firstproject.Entities.ChaineRestauration;
 import com.example.firstproject.Repositories.ChaineRestaurationRepository;
+import lombok.AllArgsConstructor;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
-
+@Service
+@AllArgsConstructor
 public class ChaineRestaurationService implements IChaineRestaurationService{
 
     ChaineRestaurationRepository chaineRestaurationRepository;
     @Override
-    public List<ChaineRestauration> retrieveAllChaineResataution() {
+    public List<ChaineRestauration> retrieveAllChaineResatautions() {
         return (List<ChaineRestauration>) chaineRestaurationRepository.findAll();
     }
 
@@ -34,7 +37,7 @@ public class ChaineRestaurationService implements IChaineRestaurationService{
     }
 
     @Override
-    public List<ChaineRestauration> addChaineResataution(List<ChaineRestauration> chaineRestaurations) {
+    public List<ChaineRestauration> addChaineResatautions(List<ChaineRestauration> chaineRestaurations) {
         return (List<ChaineRestauration>) chaineRestaurationRepository.saveAll(chaineRestaurations);
     }
 }

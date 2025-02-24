@@ -2,9 +2,12 @@ package com.example.firstproject.Services;
 
 import com.example.firstproject.Entities.Client;
 import com.example.firstproject.Repositories.ClientRepository;
+import lombok.AllArgsConstructor;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
-
+@Service
+@AllArgsConstructor
 public class ClientService implements IClientService {
 
     ClientRepository clientRepository;

@@ -2,14 +2,17 @@ package com.example.firstproject.Services;
 
 import com.example.firstproject.Entities.ChefCuisinier;
 import com.example.firstproject.Repositories.ChefCuisinierRepository;
+import lombok.AllArgsConstructor;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
-
+@Service
+@AllArgsConstructor
 public class ChefCuisinierService implements IChefCuisinier{
 
     ChefCuisinierRepository cuisinierRepository;
     @Override
-    public List<ChefCuisinier> retrieveAllChefCuisinier() {
+    public List<ChefCuisinier> retrieveAllChefCuisiniers() {
         return (List<ChefCuisinier>) cuisinierRepository.findAll();
     }
 
@@ -34,7 +37,7 @@ public class ChefCuisinierService implements IChefCuisinier{
     }
 
     @Override
-    public List<ChefCuisinier> addChefCuisinier(List<ChefCuisinier> chefCuisiniers) {
+    public List<ChefCuisinier> addChefCuisiniers(List<ChefCuisinier> chefCuisiniers) {
         return (List<ChefCuisinier>) cuisinierRepository.saveAll(chefCuisiniers);
     }
 }
