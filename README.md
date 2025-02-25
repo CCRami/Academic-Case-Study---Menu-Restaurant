@@ -1,4 +1,5 @@
-# First Project
+# Case Study: Menu-Restaurant
+
 
 This project is a Spring Boot application for managing various entities related to a restaurant chain. It includes features such as adding clients, managing menus, handling different types of components, and more.
 
